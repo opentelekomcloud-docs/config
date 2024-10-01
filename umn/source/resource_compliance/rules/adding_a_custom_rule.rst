@@ -48,7 +48,9 @@ Creating a Function with FunctionGraph
 
 #. In the upper right corner, click **Create Function**. The **Create from scratch** tab is displayed by default.
 
-#. Set **Function Type** to **Event Function** and configure the required IAM agency. The agency grants the function required permissions and must include the **rms:policyStates:update** permission.
+#. Set **Function Type** to **Event Function** and configure other parameters, including the function name and IAM agency.
+
+   The agency grants the function required permissions and must include the **rms:policyStates:update** permission.
 
 #. Click **Create Function**.
 

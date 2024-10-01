@@ -12,7 +12,7 @@ Config allows you to search for, record, and continuously evaluate your resource
 
 .. important::
 
-   To get full functionality of Config, you need to enable the resource recorder. If the resource recorder is disabled, you may fail to update your resource data or accurately evaluate your resources with rules. For details about how to enable and configure the resource recorder, see :ref:`Configuring the Resource Recorder <rms_04_0200>`.
+   To get full functionality of Config, you need to enable the resource recorder. If the resource recorder is disabled, you may fail to update your resource data or accurately evaluate your resources with rules. For details about how to enable and configure the resource recorder, see :ref:`Configuring the Resource Recorder <rms_04_0200>`
 
 Architecture
 ------------

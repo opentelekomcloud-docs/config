@@ -69,13 +69,29 @@ If you have enabled the resource recorder and specified an OBS bucket and an SMN
 
    .. note::
 
-      After you specify an OBS bucket from the current or another account, Config will write an empty file named **ConfigWritabilityCheckFile** to the OBS bucket to verify whether resources can be written to the OBS bucket. If an error is reported, you can resolve related issues based on :ref:`Why Is an Error Reported When Data Is Dumped to the OBS Bucket After the Resource Recorder Is Enabled? <rms_08_0100__section1356812297234>`.
+      After you specify an OBS bucket from the current or another account, Config will write an empty file named **ConfigWritabilityCheckFile** to the OBS bucket to verify whether resources can be written to the OBS bucket. If an error is reported, you can address the error based on :ref:`Why Is an Error Reported When Data Is Dumped to the OBS Bucket After the Resource Recorder Is Enabled? <rms_08_0100__section1356812297234>`.
 
 
    .. figure:: /_static/images/en-us_image_0000001952304017.png
       :alt: **Figure 3** Configuring an OBS bucket
 
       **Figure 3** Configuring an OBS bucket
+
+#. Specify a data retention period.
+
+   Select **Seven years (2,557 days)** or select **A custom period** and enter a retention period from 30 days to 2,557 days.
+
+   .. note::
+
+      The data retention period only applies to resource configuration data and snapshots reserved by Config. It will not affect your data storage with SMN or OBS.
+
+      Config will delete data that has been reserved for a longer time than the specified retention period.
+
+
+   .. figure:: /_static/images/en-us_image_0000001925024776.png
+      :alt: **Figure 4** Configuring a data retention period
+
+      **Figure 4** Configuring a data retention period
 
 #. .. _rms_04_0200__li9992111220134:
 
@@ -89,31 +105,31 @@ If you have enabled the resource recorder and specified an OBS bucket and an SMN
 
    -  **Select a topic from another account**:
 
-      Select Topic under other account, then enter a topic URN. For more details about topic URN, see `Concepts <https://docs.otc.t-systems.com/simple-message-notification/umn/overview/concepts.html#urn>`__ If you select a topic from another account, you need required permissions granted by the account. For details, see :ref:`Cross-Account Authorization <rms_04_0200__section95911732882>`.
+      Select Topic under other account, then enter a topic URN. For more details about topic URN, see `Concepts <https://docs.otc.t-systems.com/simple-message-notification/umn/overview/concepts.html#urn>`__. If you select a topic from another account, you need required permissions granted by the account. For details, see :ref:`Cross-Account Authorization <rms_04_0200__section95911732882>`.
 
    .. note::
 
-      To send notifications with an SMN topic, you not only need to create the topic, but also need to `add subscriptions <https://docs.otc.t-systems.com/simple-message-notification/umn/subscription_management/adding_a_subscription.html>`__ and `request subscription confirmations <https://docs.otc.t-systems.com/simple-message-notification/umn/subscription_management/requesting_subscription_confirmation.html>`__.
+      To send notifications with an SMN topic, you not only need to create the topic, but also `add subscriptions <https://docs.otc.t-systems.com/simple-message-notification/umn/subscription_management/adding_a_subscription.html>`__ and `request subscription confirmations <https://docs.otc.t-systems.com/simple-message-notification/umn/subscription_management/requesting_subscription_confirmation.html>`__.
 
 
    .. figure:: /_static/images/en-us_image_0000001924866316.png
-      :alt: **Figure 4** Configuring an SMN topic
+      :alt: **Figure 5** Configuring an SMN topic
 
-      **Figure 4** Configuring an SMN topic
+      **Figure 5** Configuring an SMN topic
 
 #. Grant permissions.
 
-   -  **Quick granting**: This option will automatically create an agency named **rms_tracker_agency** to grant the required permissions for the resource recorder to work properly. The agency contains permissions for writing data into an OBS bucket. The agency created by **quick granting** doesn't contain KMS permissions, and the resource recorder is unable to store resource change notifications and snapshots to an OBS bucket that is encrypted using KMS. If you need to use an encrypted bucket, you can add the **KMS Administrator** permission to the agency or use custom authorization. For details, see :ref:`Storing Resource Change Notifications and Resource Snapshots to an Encrypted OBS Bucket <rms_04_0200__section1414618337911>`.
+   -  **Quick granting**: This option will automatically create an agency named **rms_tracker_agency** to grant the required permissions for the resource recorder to work properly. The agency contains permissions for writing data into an OBS bucket. The agency created by **quick granting** doesn't contain KMS permissions, so the resource recorder is unable to store resource change notifications and snapshots to an OBS bucket that is encrypted using KMS. If you need to use an encrypted bucket, you can add required **KMS Administrator** permissions to the agency or use custom authorization. For details, see :ref:`Storing Resource Change Notifications and Resource Snapshots to an Encrypted OBS Bucket <rms_04_0200__section1414618337911>`.
 
       For details about how to add permissions in an agency, see `Deleting or Modifying Agencies <https://docs.otc.t-systems.com/identity-access-management/umn/user_guide/agencies/deleting_or_modifying_agencies.html>`__.
 
-   -  **Custom granting**: You can create an agency using IAM to customize authorization for Config. The agency must include either the permissions for sending notifications using an SMN topic or the permissions for writing data into an OBS bucket. To store resource changes and snapshots to an OBS bucket that is encrypted using KMS, you need the **KMS Administrator** permission. For details, see :ref:`Storing Resource Change Notifications and Resource Snapshots to an Encrypted OBS Bucket <rms_04_0200__section1414618337911>`. For details about how to create an agency, see `Cloud Service Agency <https://docs.otc.t-systems.com/identity-access-management/umn/user_guide/agencies/cloud_service_delegation.html>`__.
+   -  **Custom granting**: You can create an agency using IAM to customize authorization for Config. The agency must include either the permissions for sending notifications using an SMN topic or the permissions for writing data into an OBS bucket. To store resource changes and snapshots to an OBS bucket that is encrypted using KMS, you need the required **KMS Administrator** permissions. For details, see :ref:`Storing Resource Change Notifications and Resource Snapshots to an Encrypted OBS Bucket <rms_04_0200__section1414618337911>`. For details about how to create an agency, see `Cloud Service Agency <https://docs.otc.t-systems.com/identity-access-management/umn/user_guide/agencies/cloud_service_delegation.html>`__.
 
 
       .. figure:: /_static/images/en-us_image_0000001952145493.png
-         :alt: **Figure 5** Grant Permissions
+         :alt: **Figure 6** Grant Permissions
 
-         **Figure 5** Grant Permissions
+         **Figure 6** Grant Permissions
 
 #. Click **Save**.
 
@@ -132,9 +148,9 @@ You can modify the resource recorder at any time.
 
 
    .. figure:: /_static/images/en-us_image_0000001952305721.png
-      :alt: **Figure 6** Modify Resource Recorder
+      :alt: **Figure 7** Modify Resource Recorder
 
-      **Figure 6** Modify Resource Recorder
+      **Figure 7** Modify Resource Recorder
 
 #. Modify configurations.
 
@@ -157,9 +173,9 @@ You can disable the resource recorder at any time.
 
 
    .. figure:: /_static/images/en-us_image_0000001924867128.png
-      :alt: **Figure 7** Disabling the resource recorder
+      :alt: **Figure 8** Disabling the resource recorder
 
-      **Figure 7** Disabling the resource recorder
+      **Figure 8** Disabling the resource recorder
 
 .. _rms_04_0200__section95911732882:
 
@@ -224,7 +240,7 @@ Storing Resource Change Notifications and Resource Snapshots to an Encrypted OBS
 
    #. Log in to the management console and go to the **Key Management Service** console.
    #. In the **Custom Keys** tab, click the alias of a target key to go to its details page and create a grant on it.
-   #. Grant the account the permission for using the key based on `Creating a Grant <https://docs.otc.t-systems.com/key-management-service/umn/user_guide/key_management/managing_a_grant/creating_a_grant.html>`__.
+   #. Grant the account the permissions for using the key based on `Creating a Grant <https://docs.otc.t-systems.com/key-management-service/umn/user_guide/key_management/managing_a_grant/creating_a_grant.html>`__.
 
       -  Enter the ID of the account to be authorized for **Grantee**.
       -  Select **Create Data Key**, **Describe Key**, and **Decrypt Data Key** for **Granted Operations**.
