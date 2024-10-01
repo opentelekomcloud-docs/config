@@ -25,7 +25,7 @@ Notes and Constraints
 -  When enabling and configuring the resource recorder, you must configure :ref:`Topic <rms_04_0200__li9992111220134>` or :ref:`Resource Dump <rms_04_0200__li1379015271396>`. To enable the resource recorder, you must configure either an SMN topic or an OBS bucket.
 -  To receive notifications of resource changes with the configured SMN topic, you not only have to create the topic, but also add subscription endpoints and request subscription confirmations for the topic. For details, see `Creating a Topic <https://docs.otc.t-systems.com/simple-message-notification/umn/topic_management/creating_a_topic.html>`__, `Adding a Subscription <https://docs.otc.t-systems.com/simple-message-notification/umn/subscription_management/adding_a_subscription.html>`__, and `Requesting Subscription Confirmation <https://docs.otc.t-systems.com/simple-message-notification/umn/subscription_management/requesting_subscription_confirmation.html>`__.
 -  The resource recorder only updates data for the resources within the monitoring scope.
--  The resource recorder retains your resource information for seven years (2,557 days).
+-  By default, the resource configuration information is stored for seven years (2,557 days).
 -  There is a delay in synchronizing resource data to Config. The delay varies depending on services. If the resource recorder is enabled, Config will update related data for resources that are included in the monitoring scope within 24 hours. If the resource recorder is disabled, Config will not update resource data.
 
 .. important::

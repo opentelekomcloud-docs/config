@@ -67,7 +67,7 @@ All your cloud resources are included in a table. The table name is fixed to **r
 
 **provider** and **type** represent a unique resource. For different resources, **properties** varies. For example, for an ECS, the **provider** and **type** are **ecs** and **cloudservers**, and the **properties** contains **flavor**. For a VPC, the **provider** and **type** are **vpc** and **publicips**, and the **properties** contains **bandwidth**.
 
-You can obtain resource attributes that can be included in the **properties** element for each resource on Config console or by calling the related API. For more details, see :ref:`How Can I Obtain Resource Attributes Reported to Config? <rms_08_0100__section1077795954511>`.
+You can obtain resource attributes that can be included in the **properties** element for each resource on Config console or by calling the related API. For more details, see :ref:`How Can I Obtain Resource Attributes Reported to Config? <rms_08_0100__section1077795954511>`
 
 **properties** supports nested queries. The following shows an example of how to query the **addresses** parameter under **properties** for the running ECS.
 

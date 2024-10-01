@@ -42,7 +42,7 @@ To make an SMN topic effective, you not only need to create a topic, but add sub
 Why Do I Receive a Notification When I Did Nothing with a Resource?
 -------------------------------------------------------------------
 
-If you have specified an effective SMN topic when you enabled the resource recorder, Config will send notifications of resource changes that are resulted from both user operations and non-user operations. For more details, see :ref:`Notifications <rms_04_0300>`. You are advised to use HTTPS or FunctionGraph (functions) instead of SMS messages or emails to receive notifications from Config.
+If you have specified an effective SMN topic when you enabled the resource recorder, Config will send notifications of resource changes that are resulted from both user operations and non-user operations. For more details, see :ref:`Notifications <rms_04_0300>`. You are advised to use HTTPS or FunctionGraph functions instead of SMS messages or emails to receive notifications from Config.
 
 .. _rms_08_0100__section1077795954511:
 
@@ -85,7 +85,7 @@ Why Is an Error Reported When Data Is Dumped to the OBS Bucket After the Resourc
 If the message "Failed to write the ConfigWritabilityCheckFile file to the OBS bucket because the OBS bucket or the IAM agency is invalid" is displayed, the possible reasons are as follows:
 
 #. The IAM agency assigned to the resource recorder does not contain the permission, **obs:object:PutObject**.
-#. If an OBS bucket from the current account was used, the reason may be that the bucket policy explicitly denies the **PutObject** action from the IAM agency. If an OBS bucket from another account was used, the reason may be that the bucket policy does not explicitly allow the **PutObject** action from the IAM agency. For more details, see :ref:`Cross-Account Authorization <rms_04_0200__section95911732882>` and `Effect <https://docs.otc.t-systems.com/object-storage-service/umn/obs_console_operation_guide/permissions_control/bucket_policy_parameters/effect.html>`__.
+#. If an OBS bucket from the current account was used, the reason may be that the bucket policy explicitly denies the **PutObject** action from the IAM agency. If an OBS bucket from another account was used, the reason may be that the bucket policy does not explicitly allow the **PutObject** action from the IAM agency. For more details, see :ref:`Cross-Account Authorization <rms_04_0200__section95911732882>`. For permission judgement logic of budget policies, see `Effect <https://docs.otc.t-systems.com/object-storage-service/umn/obs_console_operation_guide/permissions_control/bucket_policy_parameters/effect.html>`__.
 #. You used an encrypted OBS bucket, but the agency assigned to the resource recorder did not contain related KMS permissions. For more details, see :ref:`Storing Resource Change Notifications and Resource Snapshots to an Encrypted OBS Bucket <rms_04_0200__section1414618337911>`.
 
 .. |image1| image:: /_static/images/en-us_image_0000001978727588.png

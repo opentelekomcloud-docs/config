@@ -92,7 +92,7 @@ Modifying a Rule
    -  **Resource Scope**: Can be modified when **Trigger Type** is set to **Configuration change**
    -  **Filter Scope**: Can be modified when **Trigger Type** is set to **Configuration change**.
    -  **Execute Every**: Can be modified when **Trigger Type** is set to **Periodic execution**.
-   -  **Configure Rule Parameters**: For a rule created with a predefined policy, you can only modify the values of parameters for **Configure Rule Parameters**. For a custom rule, you can add, delete, and modify parameters.
+   -  **Configure Rule Parameters**: For a rule created with a predefined policy, you can only modify the values of parameters for **Configure Rule Parameters**. For a custom rule, you can add, delete, and modify related parameters.
 
 #. Confirm the modifications and click **Submit.**
 
@@ -105,7 +105,7 @@ Modifying a Rule
 Deleting a Rule
 ---------------
 
-Before deleting a rule, you need to disable the rule.
+To delete a rule, you need to disable the rule first.
 
 #. Log in to the management console.
 

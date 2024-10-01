@@ -40,6 +40,10 @@ Creating a Custom Query
 
    On the left of the page, the Schema information is displayed. Schema information shows detailed resource attributes that are specified by the **properties** parameter in the statement. For details about query statements, see :ref:`Configuration Examples of Advanced Queries <rms_10_0200__section1933391511259>`.
 
+   .. note::
+
+      For supported cloud services and related schemas, see :ref:`Supported Resources <rms_01_0017>`.
+
 #. Click **Save Query** and enter the query name and description.
 
    A query name can contain only digits, letters, underscores (_), and hyphens (-). It cannot exceed 64 characters.
