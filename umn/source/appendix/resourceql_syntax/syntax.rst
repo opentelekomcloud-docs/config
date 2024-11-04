@@ -72,7 +72,7 @@ For example, to list resources with a quantity greater than 100 in each region, 
 Numeric Operation and Boolean Operation
 ---------------------------------------
 
-ResourceQL supports binary mathematical operations on integers and floating digits. The following operators are supported:``'+,-,*,/,%'``
+ResourceQL supports binary mathematical operations on integers and floating digits. The following operators are supported: ``'+,-,*,/,%'``
 
 Values of the same type can be compared. The following comparison operators are supported: <, >, <=, >=, =, <>, !=. Both <> and != indicate not equal. Values are compared in size, and strings are compared in lexicographic order. Values and sets can also be compared. In this case, one from 'ALL \| SOME \| ANY' on the right of the comparison operator is used to specify the comparison range. 'All' indicates that all elements in the set must be met. 'SOME/ANY' indicates that at least one element must be met.
 
