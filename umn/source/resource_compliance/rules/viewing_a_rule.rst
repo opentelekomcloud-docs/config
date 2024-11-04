@@ -25,7 +25,7 @@ Procedure
 
 #. Click the name of the target rule to go to the **Rule Details** page.
 
-   On the left of the **Basic Information** page, evaluation results are displayed, and on the right, rule details are displayed. Above the evaluation result list, you can filter evaluation results by resource name and ID. You can also export the list.
+   On the left of the **Basic Information** tab, evaluation results are displayed, and on the right, rule details are displayed. Above the list, you can filter the resources by evaluation result, resource name, and resource ID. You can also export all evaluation results.
 
 
    .. figure:: /_static/images/en-us_image_0000001924869504.png

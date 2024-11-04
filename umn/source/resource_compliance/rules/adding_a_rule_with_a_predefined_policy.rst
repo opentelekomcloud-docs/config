@@ -8,7 +8,7 @@ Adding a Rule with a Predefined Policy
 Scenarios
 ---------
 
-You can create a rule to evaluate your resource compliance. When you create a rule, you can select a built-in policy or custom policy, specify a monitoring scope, and specify the trigger type. Evaluation results are provided for you to check compliance data.
+You can create a rule to evaluate your resource compliance. When creating a rule, you can select a built-in policy or custom policy, specify a monitoring scope, and specify the :ref:`trigger type <rms_05_0200>`. Evaluation results are provided for you to check compliance data.
 
 This section describes how to add predefined rules.
 

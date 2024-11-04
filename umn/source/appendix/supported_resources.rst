@@ -7,53 +7,104 @@ Supported Resources
 
 .. table:: **Table 1** Supported resources
 
-   ================================= ==========================
-   Supported Service                 Resource Type
-   ================================= ==========================
-   Bare Metal Server (BMS)           BMSs
-   Cloud Backup and Recovery (CBR)   Vaults
-   Cloud Container Engine (CCE)      Clusters
-   \                                 Nodes
-   Cloud Container Instance (CCI)    Pods
-   Cloud Search Service (CSS)        Clusters
-   DataArts Studio (DARTS)           Instances
-   \                                 CDM Clusters
-   \                                 Workspaces
-   Database Security Service (DBSS)  Cloud Servers
-   Document Database Service (DDS)   Instances
-   Dedicated Host (DeH)              DeHs
-   Data Lake Insight (DLI)           Queues
-   \                                 Elastic Resource Pools
-   Distributed Message Service (DMS) Kafka Instances
-   Data Replication Service (DRS)    Backup Migration Tasks
-   \                                 Disaster Recovery Tasks
-   \                                 Data Synchronization Tasks
-   \                                 Online Migration Tasks
-   Data Warehouse Service (DWS)      Clusters
-   Elastic Cloud Server (ECS)        ECSs
-   Elastic Load Balance (ELB)        Listeners
-   \                                 Load Balancers
-   Enterprise Router (ER)            Enterprise Routers
-   \                                 Attachments
-   Elastic Volume Service (EVS)      Disks
-   GaussDB                           Instances
-   \                                 Nodes
-   GeminiDB                          Instances
-   \                                 Nodes
-   Image Management Service (IMS)    Images
-   Key Management Service (KMS)      Keys
-   MapReduce Service (MRS)           Clusters
-   NAT Gateway (NAT)                 Public NAT Gateways
-   Object Storage Service (OBS)      Buckets
-   Relational Database Service (RDS) Instances
-   Scalable File Service (SFS)       File Systems
-   Simple Message Notification (SMN) Topics
-   Virtual Private Cloud (VPC)       VPCs
-   \                                 Bandwidths
-   \                                 Security Groups
-   \                                 EIPs
-   Virtual Private Network (VPN)     VPN Connections
-   \                                 VPN Gateways
-   Web Application Firewall (WAF)    Policies
-   \                                 Certificates
-   ================================= ==========================
+   +-----------------------------------+----------------------------+--------------------------+
+   | Supported Service                 | Resource Type              | Schema                   |
+   +===================================+============================+==========================+
+   | Bare Metal Server (BMS)           | BMSs                       | bms.servers              |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Cloud Backup and Recovery (CBR)   | Vaults                     | cbr.vault                |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Cloud Container Engine (CCE)      | Clusters                   | cce.clusters             |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Nodes                      | cce.nodes                |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Cloud Container Instance (CCI)    | Pods                       | cci.pods                 |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Config                            | Trackers                   | config.trackers          |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | PolicyAssignments          | config.policyAssignments |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Cloud Search Service (CSS)        | Clusters                   | css.clusters             |
+   +-----------------------------------+----------------------------+--------------------------+
+   | DataArts Studio (DARTS)           | Instances                  | dayu.instances           |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | CDM Clusters               | dayu.cdmClusters         |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Workspaces                 | dayu.workspaces          |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Database Security Service (DBSS)  | Cloud Servers              | dbss.cloudservers        |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Document Database Service (DDS)   | Instances                  | dds.instances            |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Dedicated Host (DeH)              | DeHs                       | deh.dedicatedhosts       |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Data Lake Insight (DLI)           | Queues                     | dli.queues               |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Elastic Resource Pools     | dli.elasticresourcepool  |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Distributed Message Service (DMS) | Kafka Instances            | dms.kafkas               |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Data Replication Service (DRS)    | Backup Migration Tasks     | drs.backupMigrationJob   |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Disaster Recovery Tasks    | drs.dataGuardJob         |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Data Synchronization Tasks | drs.synchronizationJob   |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Online Migration Tasks     | drs.migrationJob         |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Data Warehouse Service (DWS)      | Clusters                   | dws.clusters             |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Elastic Cloud Server (ECS)        | ECSs                       | ecs.cloudservers         |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Elastic Load Balance (ELB)        | Listeners                  | elb.listeners            |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Load Balancers             | elb.loadbalancers        |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Enterprise Router (ER)            | Enterprise Routers         | er.instances             |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Attachments                | er.attachments           |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Elastic Volume Service (EVS)      | Disks                      | evs.volumes              |
+   +-----------------------------------+----------------------------+--------------------------+
+   | GaussDB                           | Instances                  | gaussdb.instance         |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Nodes                      | gaussdb.nodes            |
+   +-----------------------------------+----------------------------+--------------------------+
+   | GeminiDB                          | Instances                  | nosql.instances          |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Nodes                      | nosql.nodes              |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Image Management Service (IMS)    | Images                     | ims.images               |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Key Management Service (KMS)      | Keys                       | kms.keys                 |
+   +-----------------------------------+----------------------------+--------------------------+
+   | MapReduce Service (MRS)           | Clusters                   | mrs.mrs                  |
+   +-----------------------------------+----------------------------+--------------------------+
+   | NAT Gateway (NAT)                 | Public NAT Gateways        | nat.natGateways          |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Object Storage Service (OBS)      | Buckets                    | obs.buckets              |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Relational Database Service (RDS) | Instances                  | rds.instances            |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Scalable File Service (SFS)       | File Systems               | sfsturbo.shares          |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Simple Message Notification (SMN) | Topics                     | smn.topic                |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Virtual Private Cloud (VPC)       | VPCs                       | vpc.vpcs                 |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Bandwidths                 | vpc.bandwidths           |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Security Groups            | vpc.securityGroups       |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | EIPs                       | vpc.publicips            |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Virtual Private Network (VPN)     | VPN Connections            | vpnaas.vpnConnections    |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | VPN Gateways               | vpnaas.vpnGateways       |
+   +-----------------------------------+----------------------------+--------------------------+
+   | Web Application Firewall (WAF)    | Policies                   | waf.policy               |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Certificates               | waf.certificate          |
+   +-----------------------------------+----------------------------+--------------------------+
+   |                                   | Instances                  | waf.instance             |
+   +-----------------------------------+----------------------------+--------------------------+
