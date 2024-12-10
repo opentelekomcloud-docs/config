@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'config-api-ref.tex',
-     u'Config - API Reference',
+    u'Config - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
