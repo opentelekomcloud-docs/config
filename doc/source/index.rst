@@ -7,6 +7,7 @@ With Config, you can search for, record, and continuously evaluate your resource
    :class: container-sbv
 
    .. service_card::
+      :environment: internal
       :service_type: config
       :umn: This document describes Config, helping you properly use the service.
       :api-ref: This document describes the Config APIs.
