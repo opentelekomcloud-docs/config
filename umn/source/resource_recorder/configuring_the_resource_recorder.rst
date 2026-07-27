@@ -83,9 +83,10 @@ If you have enabled the resource recorder and specified an OBS bucket and an SMN
 
    .. note::
 
-      The data retention period only applies to resource configuration data and snapshots reserved by Config. It will not affect your data storage with SMN or OBS.
+      The data retention period only applies to resource configurations and snapshots reserved by Config. It will not affect your data storage with SMN or OBS.
 
-      Config will delete data that has been reserved for a longer time than the specified retention period.
+      | After a retention period is configured, Config will delete data older than the retention period.
+      | If you modify the data retention period, the change is only applied to newly recorded data. Existing data is not affected. For example, if you modify the data retention period from 100 days to 30 days, data recorded after the modification will only be retained for 30 days by Config, and data recorded before the modification will still be retained for 100 days.
 
 
    .. figure:: /_static/images/en-us_image_0000001925024776.png
