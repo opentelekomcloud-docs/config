@@ -4,6 +4,7 @@
     default-branch: main
     templates:
       - helpcenter-base-jobs-no-check
+      - api-ref-hc-jobs
     vars:
       sphinx_pdf_files:
         - config-api-ref.pdf
